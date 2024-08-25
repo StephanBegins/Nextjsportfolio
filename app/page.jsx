@@ -3,6 +3,7 @@ import { FiDownload } from 'react-icons/fi'
 
 // components
 import Social from "@/components/Social";
+import Photo from "@/components/Photo";
 
 const Home = () => {
   return (
@@ -29,6 +30,10 @@ const Home = () => {
                 items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500" />
               </div>
             </div>
+          </div>
+          {/* photo */}
+          <div>
+            <Photo />
           </div>
         </div>
       </div>
