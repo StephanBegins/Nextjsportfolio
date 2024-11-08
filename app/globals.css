@@ -16,3 +16,15 @@
         @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
     }
 }
+/* globals.css */
+.rotating-text {
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .rotating-text-appear {
+    opacity: 1;
+  }
+  
+  
