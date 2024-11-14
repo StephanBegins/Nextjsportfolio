@@ -1,4 +1,5 @@
-/** @type {import('tailwindcss').Config} */
+// In tailwind.config.js
+
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -7,7 +8,6 @@ module.exports = {
     './app/**/*.{js,jsx}',
     './src/**/*.{js,jsx}',
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -24,12 +24,12 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#1c1c22',
+        primary: '#1c1c22', // Your primary color
         accent: {
-          DEFAULT: '#00ff99',
+          DEFAULT: '#00ff99', // Accent color for glowing
           hover: '#00e187',
         },
-        alternative: '#003333', // New color for stats background
+        alternative: '#121212', // Updated dark gray for stats background
       },
 
       keyframes: {
@@ -52,7 +52,7 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "glowing-border": "glowing-border 3s ease-in-out infinite", // Added glowing border animation
+        "glowing-border": "glowing-border 3s ease-in-out infinite", // Glowing border animation
       },
     },
   },

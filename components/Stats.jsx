@@ -15,27 +15,20 @@ const stats = [
 
 const Stats = () => {
     return (
-        <section className="pt-4 pb-12 xl:pt-0 xl:pb-0 bg-primary px-4"> {/* Outer section with padding */}
-            {/* Stats section with alternative background color */}
+        <section className="pt-4 pb-12 xl:pt-0 xl:pb-0 bg-primary px-4">
+            {/* Stats section with dark gray background */}
             <div className="relative -ml-17 pl-8 bg-alternative rounded-2xl border-4 border-transparent bg-clip-padding animate-glowing-border">
                 <div className="container mx-auto">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[80vw] mx-auto"> {/* Centered content */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[80vw] mx-auto">
                         {stats.map((item, index) => (
-                            <div 
-                                className="flex flex-col items-center text-center lg:items-start lg:text-left" 
-                                key={index}
-                            >
+                            <div className="flex flex-col items-center text-center lg:items-start lg:text-left" key={index}>
                                 <CountUp 
                                     end={item.num} 
                                     duration={7} 
                                     delay={2} 
                                     className="text-5xl xl:text-6xl font-extrabold text-white" 
                                 />
-                                <p 
-                                    className={`${
-                                        item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
-                                    } leading-snug text-gray-200`} 
-                                >
+                                <p className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"} leading-snug text-gray-200`}>
                                     {item.text}
                                 </p>
                             </div>
