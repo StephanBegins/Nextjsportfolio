@@ -23,28 +23,36 @@ module.exports = {
       primary: "var(--font-jetbrainsMono)",
     },
     extend: {
-
       colors: {
         primary: '#1c1c22',
         accent: {
           DEFAULT: '#00ff99',
           hover: '#00e187',
         },
+        alternative: '#003333', // New color for stats background
       },
 
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+        "glowing-border": {
+          '0%': {
+            borderColor: 'rgba(0, 255, 153, 0)',
+            boxShadow: '0 0 5px rgba(0, 255, 153, 0.5), 0 0 10px rgba(0, 255, 153, 0.4), 0 0 15px rgba(0, 255, 153, 0.3)',
+          },
+          '50%': {
+            borderColor: 'rgba(0, 255, 153, 1)',
+            boxShadow: '0 0 5px rgba(0, 255, 153, 1), 0 0 20px rgba(0, 255, 153, 0.8), 0 0 30px rgba(0, 255, 153, 0.6)',
+          },
+          '100%': {
+            borderColor: 'rgba(0, 255, 153, 0)',
+            boxShadow: '0 0 5px rgba(0, 255, 153, 0.5), 0 0 10px rgba(0, 255, 153, 0.4), 0 0 15px rgba(0, 255, 153, 0.3)',
+          }
         },
       },
+
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "glowing-border": "glowing-border 3s ease-in-out infinite", // Added glowing border animation
       },
     },
   },
