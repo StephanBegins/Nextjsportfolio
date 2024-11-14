@@ -1,5 +1,4 @@
-// In tailwind.config.js
-
+// tailwind.config.js
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -24,12 +23,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#1c1c22', // Your primary color
+        primary: '#1c1c22', // Your primary background color
         accent: {
           DEFAULT: '#00ff99', // Accent color for glowing
           hover: '#00e187',
         },
         alternative: '#121212', // Updated dark gray for stats background
+        darkBlue: '#121C24', // Custom darker blue for stats background
       },
 
       keyframes: {

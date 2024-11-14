@@ -1,12 +1,14 @@
+// app/layout.jsx
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-// components
+// Components
 import Header from "@/components/Header";
 import PageTransition from "@/components/ui/PageTransition";
 import StairTransition from "@/components/StairTransition";
+import CustomCursor from "@/components/customcursor";  // Import Custom Cursor Component
 
-const jetbrainsMono = JetBrains_Mono({ 
-  subsets: ["latin"], 
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: '--font-jetbrainsMono'
 });
@@ -19,12 +21,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={jetbrainsMono.variable}>
+      <body className="font-primary bg-primary text-white">
         <Header />
         <StairTransition />
+        <CustomCursor /> {/* Add the custom cursor here */}
         <PageTransition>{children}</PageTransition>
-
-        </body>
+      </body>
     </html>
   );
-}       
+}
