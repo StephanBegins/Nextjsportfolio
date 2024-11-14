@@ -11,6 +11,11 @@ const links = [
         path: '/',
     },
     {
+        name: 'education',
+        path: '/education',
+
+    },
+    {
         name: 'services',
         path: '/services',
     },
@@ -21,6 +26,11 @@ const links = [
     {
         name: 'work',
         path: '/work',
+    },
+    {
+        name: 'blog',
+        path: '/blog',
+
     },
     {
         name: 'contact',
