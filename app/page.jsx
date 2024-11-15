@@ -2,6 +2,7 @@
 
 import Button from "@/components/ui/button";
 import { FiDownload } from 'react-icons/fi';
+import "./globals.css";
 
 // components
 import Social from "@/components/Social";

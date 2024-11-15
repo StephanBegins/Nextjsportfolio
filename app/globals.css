@@ -1,47 +1,48 @@
-/* globals.css */
+/* Base Tailwind Configurations */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply font-primary bg-primary text-white leading-loose;
-    }
-    .h1 {
-        @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
-    }
-    .h2 {
-        @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
-    }
-    .h3 {
-        @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
-    }
+  body {
+    @apply font-primary bg-primary text-white leading-loose;
+  }
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
 }
 
-.rotating-text {
-    display: inline-block;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.rotating-text-appear {
-    opacity: 1;
-}
+/* Custom Cursor Styles */
+/* Custom Cursor Styles */
 /* globals.css */
+body,
+a,
+button,
+svg {
+  cursor: none; /* Hide the default cursor */
+}
 
-/* This applies the custom cursor transition and glow animation */
 .cursor {
-  pointer-events: none; /* Make sure the cursor doesn't interfere with other elements */
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  pointer-events: none; /* Ensure custom cursor does not interfere with interaction */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 255, 153, 0.8);
+  border-radius: 50%;
+  z-index: 9999;
+  transition: transform 0.05s linear, box-shadow 0.2s ease-in-out;
 }
 
 .cursor.glow {
   box-shadow: 0 0 10px rgba(0, 255, 153, 0.8), 0 0 20px rgba(0, 255, 153, 0.6), 0 0 30px rgba(0, 255, 153, 0.4);
-}
-
-/* Optional: If you want the cursor to have a smooth scaling transition */
-.cursor {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cursor.scale-150 {

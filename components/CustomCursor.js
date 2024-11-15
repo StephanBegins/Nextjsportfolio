@@ -1,6 +1,6 @@
-"use client";  // Mark this file as a client-side component
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const CustomCursor = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -10,20 +10,21 @@ const CustomCursor = () => {
 
     // Track the mouse position
     const moveCursor = (e) => {
-      cursor.style.top = `${e.pageY - 10}px`;  // Follow mouse Y
-      cursor.style.left = `${e.pageX - 10}px`; // Follow mouse X
+      const cursorSize = 40; // Adjust this if the size of the cursor changes
+      const offset = cursorSize / 2; // To align the sharp tip with the center of the circle
+      cursor.style.transform = `translate(${e.clientX - offset}px, ${e.clientY - offset}px)`;
     };
 
-    document.addEventListener("mousemove", moveCursor); // Update cursor position on mouse move
+    document.addEventListener("mousemove", moveCursor); // Attach the mousemove event
 
-    // Add event listeners for hover effect on links and buttons
+    // Add hover effect listeners for interactive elements
     const hoverElements = document.querySelectorAll("a, button");
     hoverElements.forEach((element) => {
       element.addEventListener("mouseover", () => setIsHovered(true));
       element.addEventListener("mouseleave", () => setIsHovered(false));
     });
 
-    // Cleanup
+    // Cleanup event listeners on unmount
     return () => {
       document.removeEventListener("mousemove", moveCursor);
     };
@@ -31,7 +32,7 @@ const CustomCursor = () => {
 
   return (
     <div
-      className={`cursor fixed top-0 left-0 w-10 h-10 rounded-full bg-accent transform -translate-x-1/2 -translate-y-1/2 transition-all duration-150 ease-in-out ${
+      className={`cursor fixed top-0 left-0 w-10 h-10 rounded-full bg-accent pointer-events-none z-[9999] ${
         isHovered ? "scale-150 glow" : "scale-100"
       }`}
     />

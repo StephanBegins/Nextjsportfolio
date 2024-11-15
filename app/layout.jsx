@@ -1,16 +1,15 @@
-// app/layout.jsx
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 // Components
 import Header from "@/components/Header";
 import PageTransition from "@/components/ui/PageTransition";
 import StairTransition from "@/components/StairTransition";
-import CustomCursor from "@/components/customcursor";  // Import Custom Cursor Component
+import CustomCursor from "@/components/CustomCursor"; // Import Custom Cursor Component
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: '--font-jetbrainsMono'
+  variable: "--font-jetbrainsMono",
 });
 
 export const metadata = {
