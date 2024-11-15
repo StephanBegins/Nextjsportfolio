@@ -1,4 +1,3 @@
-// tailwind.config.js
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -23,11 +22,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#1c1c22', // Your primary background color
-        accent: {
-          DEFAULT: '#00ff99', // Accent color for glowing
-          hover: '#00e187',
-        },
+        primary: '#0c001a', // Custom background color for primary
+        accent: '#c4a3ef', // Updated accent color
         alternative: '#121212', // Updated dark gray for stats background
         darkBlue: '#121C24', // Custom darker blue for stats background
       },
@@ -35,16 +31,16 @@ module.exports = {
       keyframes: {
         "glowing-border": {
           '0%': {
-            borderColor: 'rgba(0, 255, 153, 0)',
-            boxShadow: '0 0 5px rgba(0, 255, 153, 0.5), 0 0 10px rgba(0, 255, 153, 0.4), 0 0 15px rgba(0, 255, 153, 0.3)',
+            borderColor: 'rgba(196, 163, 239, 0)', // updated color
+            boxShadow: '0 0 5px rgba(196, 163, 239, 0.5), 0 0 10px rgba(196, 163, 239, 0.4), 0 0 15px rgba(196, 163, 239, 0.3)',
           },
           '50%': {
-            borderColor: 'rgba(0, 255, 153, 1)',
-            boxShadow: '0 0 5px rgba(0, 255, 153, 1), 0 0 20px rgba(0, 255, 153, 0.8), 0 0 30px rgba(0, 255, 153, 0.6)',
+            borderColor: 'rgba(196, 163, 239, 1)', // updated color
+            boxShadow: '0 0 5px rgba(196, 163, 239, 1), 0 0 20px rgba(196, 163, 239, 0.8), 0 0 30px rgba(196, 163, 239, 0.6)',
           },
           '100%': {
-            borderColor: 'rgba(0, 255, 153, 0)',
-            boxShadow: '0 0 5px rgba(0, 255, 153, 0.5), 0 0 10px rgba(0, 255, 153, 0.4), 0 0 15px rgba(0, 255, 153, 0.3)',
+            borderColor: 'rgba(196, 163, 239, 0)', // updated color
+            boxShadow: '0 0 5px rgba(196, 163, 239, 0.5), 0 0 10px rgba(196, 163, 239, 0.4), 0 0 15px rgba(196, 163, 239, 0.3)',
           }
         },
       },

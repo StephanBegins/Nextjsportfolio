@@ -19,8 +19,6 @@
 }
 
 /* Custom Cursor Styles */
-/* Custom Cursor Styles */
-/* globals.css */
 body,
 a,
 button,
@@ -35,14 +33,14 @@ svg {
   left: 0;
   width: 40px;
   height: 40px;
-  background-color: rgba(0, 255, 153, 0.8);
+  background-color: rgba(196, 163, 239, 0.8); /* Updated to c4a3ef */
   border-radius: 50%;
   z-index: 9999;
   transition: transform 0.05s linear, box-shadow 0.2s ease-in-out;
 }
 
 .cursor.glow {
-  box-shadow: 0 0 10px rgba(0, 255, 153, 0.8), 0 0 20px rgba(0, 255, 153, 0.6), 0 0 30px rgba(0, 255, 153, 0.4);
+  box-shadow: 0 0 10px rgba(196, 163, 239, 0.8), 0 0 20px rgba(196, 163, 239, 0.6), 0 0 30px rgba(196, 163, 239, 0.4);
 }
 
 .cursor.scale-150 {
@@ -52,4 +50,3 @@ svg {
 .cursor.scale-100 {
   transform: scale(1);
 }
-

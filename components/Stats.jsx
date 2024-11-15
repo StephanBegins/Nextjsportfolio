@@ -16,7 +16,7 @@ const stats = [
 const Stats = () => {
   return (
     <section className="pt-4 pb-12 xl:pt-0 xl:pb-0 bg-primary px-4">
-      <div className="relative -ml-17 pl-8 bg-alternative rounded-2xl border-4 border-transparent bg-clip-padding animate-glowing-border stats-container">
+      <div className="relative -ml-17 pl-8 bg-[#02051b] rounded-2xl border-4 border-[#c4a3ef] bg-clip-padding animate-glowing-border stats-container">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[80vw] mx-auto">
             {stats.map((item, index) => (
